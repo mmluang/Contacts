@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Melanie">
+  <title>Contacts</title>
+</head>
+
+<style>
+  table, th, td {
+    border:1px solid black;
+  }
+</style>
+
+<body>
+  <h2>Contacts</h2>
+  <table style="width:50%">
+    <tr>
+      <th>Slot #</th>
+      <th>Number</th>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>Arnold</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Sly</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Dwayne</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Vin</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>JCVD</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Steven</td>
+    </tr>
+  </table>
+
+  <script>
+    let repeat = 'Y';
+    const contacts = ['Arnold', 'Sly', 'Dwayne', 'Vin', 'JCVD', 'Steven'];
+
+    while (repeat == 'Y') {
+      let userNumber = prompt('Enter a slot number.')
+      let contactName = contacts[userNumber];
+
+      if (contacts[userNumber] == undefined) {
+        alert('Name is not found.')
+      } else {
+        let nameMsg = alert('You selected ' + contactName + '.');
+      }
+      repeat = prompt('Do you want to search for another name? (Y/N)');
+    }
+  </script>
+</body>
+
+</html>
